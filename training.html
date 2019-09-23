@@ -157,8 +157,49 @@
                     </tr>
                 </table>
 
+            <!-- from 양식지 -->
+            <form>
+                <!-- text, password, radio, chekbox,-->
+                <input type="text" placeholder="ID"" value=""/>
+                <br>
+                <input type="password" placeholder="password"" value=""/>
+                <br>
+                <input type="radio" name="bt1" value="1"/>
+                <input type="radio" name="bt1" value="2"/>
+                <input type="radio" name="bt1" value="3"/>
+                <!-- 같은 정보의 라디오 버튼의 이름은 같아야함-->
+                <br>
+                <input type="radio" name="bt2" value="1"/>
+                <input type="radio" name="bt2" value="2"/>
+                <input type="radio" name="bt2" value="3"/>
+                <br>
+                <input type="checkbox" value="1"/>
+                <input type="checkbox" value="2"/>
+                <input type="checkbox" value="3"/>
+                <br>
+                <select>
+                    <option>직접 입력</option>
+                    <option>naver.com</option>
+                    <option>gmail.com</option>
+                </select>
+
+                <br>
+                <!-- cols 열 개수 (글자수), rows 행 개수 (줄수)-->
+                <textarea cols="20" rows="3">
+
+                </textarea>
+
+                <br>
+                <!-- button 버튼 -->
+                <input type="button" onclick="alert('완료')" value="sign up">
+            
+                <!-- submit 제출 버튼-->
+                <input type="submit" value="제출">
+
+            </form>
+
+
+
 
     </body>
-
-
 </html>
