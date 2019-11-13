@@ -8,6 +8,7 @@
             header{
                 background-color: #373a3a;
                 color: white; 
+                padding: 10px 50px; /* 상하 좌우 */
             }
             header>h1{
                 margin: 0px;
@@ -39,13 +40,86 @@
             }
             #main_visual{
                 background-image: url("images/troye.jpg");
-                height: 700px;
                 background-size: auto 100%;
                 background-size: cover;
                 background-repeat: no-repeat;
                 /* repeat, no-repeat, repeat-x, repeat-y */
                 background-color: black;
                 background-position: 50% 50%; /* 가로 세로 */
+
+                color: white; /* 상속 */
+                text-align: center;
+
+                padding: 100px 0px;
+
+            }
+            #main_visual h2{
+                letter-spacing: 6px;
+                font-size: 35px;
+                margin: 8px 0px; /* 상하 좌우 */
+            }
+            #main_visual img{
+                margin-top: 120px;
+            }
+            body{
+                margin: 0px;
+            }
+            #tittle_top{
+                font-size: 20px;
+            }
+            #tittle_bottom{
+                font-size: 15px;
+            }
+            section{
+                text-align: center;
+            }
+            section h3{
+                color: #02918c;
+                font-size: 25px;
+                font-weight: normal;
+                margin: 50px 0px;
+            }
+            section p{
+                margin: 50px 100px;
+            }
+            section #about_list{
+                padding: 0px;
+                margin: 0px 50px;
+            }
+            section dd{
+                margin: 0px;
+            }
+            section>#about_list>li{
+                float: left;
+                width: 200px; /* 고정값 */
+                width: calc(25% - (1px / 4 * 3) - 30px - 30px);
+
+                list-style: none;
+                border-right: solid 1px gray;
+                padding: 30px;
+            } 
+            section>#about_list>li:nth-child(4){
+                border: none;
+            } 
+            #work_list>li{
+                float: left;
+                list-style: none;
+                width: 25%;
+            }     
+            #work_list img{
+                width: 100%; /* 있을 수 있는 공간 100% 기준*/
+                display: inline; /* 원래 이미지의 출력방식*/
+                display: block; /* 블록형으로 변경 */ 
+            }  
+            #work_list{
+                padding: 0px;
+                margin: 0px;
+            }  
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
     </head>
@@ -63,14 +137,81 @@
                         <li>SERVCE</li>
                         <li>MY WORKE</li>
                         <li>CONTACT ME</li>
-                        <div class="clear"></div>
+                        <div class="clear"></div><div class="clear"></div>
                     </ul>                                      
                 </nav>
                 <div class="clear"></div>
             </header>
-            <div id="main_visual"></div>
-            <section>content1</section>
-            <section>content2</section>
+            <div id="main_visual">
+                <div id="tittle_top">Troye sivan</div>
+                <h2>Mu My My!</h2>
+                <div id="tittle_bottom">Bloom</div>
+                <img src="images/layout2_button.jpg" />
+            </div>
+            <section>
+                <h3>ABOUT ME</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat duis aute irure dolor.
+                </p>
+                <ul id="about_list">
+                    <li>
+                        <img src="images/layout2_icon1.jpg" />
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon2.jpg" />
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon3.jpg" />
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon4.jpg" />
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </section>
+            <section>
+                <h3>MY WORK</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
+                <ul id="work_list">
+                    <li><img src="images/troyesivan1.jpg" /></li>
+                    <li><img src="images/troyesivan4.jpg" /></li>
+                    <li><img src="images/troyesivan3.jpg" /></li>
+                    <li><img src="images/troyesivan6.jpg" /></li>
+                    <li><img src="images/troyesivan1.jpg" /></li>
+                    <li><img src="images/troyesivan4.jpg" /></li>
+                    <li><img src="images/troyesivan3.jpg" /></li>
+                    <li><img src="images/troyesivan6.jpg" /></li>                     
+                    <div class="clear"></div>
+            </section>
         </div>
     </body>
 </html>
