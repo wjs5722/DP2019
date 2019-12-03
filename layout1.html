@@ -4,12 +4,54 @@
         <title>layout1</title>
         <meta charset="utf-8" />
         <style>
-            header,div,nav,footer,ul,li,h1,h2,h3{
-               /* border: solid 1px black; */ /* 경계선 긋기 */
-                /* margin: 10px; */ /* 서로간에 여유공간 만들기 */
+            body{
+            margin: 0px;
+            color: black;
+            }
+            .one{
+                background-color: black;
+                color: white;
+                padding: 0px 2px;
+                position: sticky;
+                top:0;
+                left: 0; right: 0;
+            }
+            .one>h1{
+                margin: 5px;
+            }
+            .one>nav>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+                color: white;
+            }
+            .one ul{
+                margin: right;
+                font-size: 19px;
+            }
+            .one a{
+                color: white;
+                text-decoration: none;
+                padding-left: 40px;
+            }
+            .float_right li{
+                float: right;
+                list-style: none;
+                padding: 10px;                
+            }
+            .float_left ul{
+                float: left;
+                padding: 0px 0px 0px 10px; 
+                font-size: 20px;
+            }
+            .float_right a{
+                color: white;
+                text-decoration: none;
+                padding: 0px 40px;
             }
             header{
                 padding: 10px 50px; /* 상하 좌우 */
+                padding-top: 40px;
             }
             header>ul>li{
                 float: left; /* 둥둥떠다니게 : 왼쪽기준 */
@@ -49,7 +91,7 @@
             nav>ul{
                 margin: 8px;
             }
-            nav{
+            .nav02{
                 background-color: gainsboro;
                 padding: 10px 50px
             }
@@ -75,9 +117,6 @@
             }
             #content dt{
                 font-weight: bold; /* 글씨-두께 : 두껍게*/
-            }
-            #content dd{
-
             }
             .content_part dd{
                 margin: 0px;
@@ -133,10 +172,31 @@
             body{
                 margin: 0px;
             }
-
+        </style>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+                .one{
+                    font-family:'PT Serif', serif;
+                }
+            .one{
+                font-style: bold;
+            }    
         </style>
     </head>
     <body>
+        <header class="one">
+            <h1 class="float_left">INDEX</h1>
+            <nav class="float_right">
+                <ul>
+                    <a href="layout4.html"> <li>EXODEUX</li> </a>
+                    <a href="layout3.html"> <li>LAYOUT3</li> </a>
+                    <a href="layout2.html"> <li>LAYOUT2</li> </a>
+                    <a href="layout1.html"> <li>LAYOUT1</li> </a>
+                    <a href="index.html"> <li>INDEX</li> </a>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </header>
         <div id="wrap">
             <header>
                 <h1 class="float_left">
@@ -155,7 +215,7 @@
                 </div>
                 <div class="clear"></div> <!-- float left 해제 -->
             </header>
-            <nav>
+            <nav class="nav02">
                 <h2 class="float_left">See Our Works</h2>
                 <ul class="float_right">
                     <li>Web Design</li>
@@ -294,15 +354,27 @@
                 </div>
             </div>
             <ul id="footer_right"> <!-- 오른편 상자 역할 -->
-                <li><img src="images/layout1_footer_icon1.png"></li>
-                <li><img src="images/layout1_footer_icon2.png"></li>
-                <li><img src="images/layout1_footer_icon3.png"></li>
-                <li><img src="images/layout1_footer_icon4.png"></li>
-                <li><img src="images/layout1_footer_icon5.png"></li>
-                <li><img src="images/layout1_footer_icon6.png"></li>
+                <li><img src="images/layout1_footer_icon1.png"></li></img>
+                <li><img src="images/layout1_footer_icon2.png"></li></img>
+                <li><img src="images/layout1_footer_icon3.png"></li></img>
+                <li><img src="images/layout1_footer_icon4.png"></li></img>
+                <li><img src="images/layout1_footer_icon5.png"></li></img>
+                <li><img src="images/layout1_footer_icon6.png"></li></img>
                 <div class="clear"></div>
             </ul>
             <div class="clear"></div>
+        </footer>
+        <footer>
+                <div id="footer_left">
+                    <div>Kaywon University of Art and Design</div>
+                    <div>Digital Media Design Content programming</div>
+                    <div class="clear"></div>
+                </div>
+                <ul id="footer_right"> <!-- 오른편 상자 역할 -->
+                    <li><img src="images/footer_logo.png"width="70"></li></img>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
         </footer>
         </div>
     </body>

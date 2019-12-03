@@ -5,13 +5,83 @@
         <meta charset="utf-8" />
         <style>
             /* CSS 작성하는 곳 */
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            header{
+            color: white; 
+            padding: 30px 50px; /* 상하 좌우 */
+            left: 0; right: 0;
+            background-color: black;
+            }   
+            header>nav li{
+                float: left;
+                list-style: none; /*목록-모습(동그라미) : 없음 */
+                padding: 0px 10px;  /*  바깥 여백 - 왼쪽 :10px  */
+                color: white;
+            }
+            header>nav ul{
+                margin: -10px -20px;
+            }
+            header>h1{
+                margin: -18px -20px;
+                font-size: 30px;
+            }
             header{
                 background-color: #373a3a;
                 color: white; 
-                padding: 10px 50px; /* 상하 좌우 */
+                padding: 0px 35px; /* 상하 좌우 */
+            }
+            .one{
+                background-color: black;
+                color: white;
+                padding: 0px 2px;
+                position: sticky;
+                top:0;
+                left: 0; right: 0;
+                font-size: 20px;
+            }
+            .one>h1{
+                margin: 5px;
+            }
+            .one>nav>li{
+                float: right;
+                list-style: none;
+                padding: 0px 10px;
+                color: white;
+            }
+            .one ul{
+                margin: right;
+            }
+            .one a{
+                color: white;
+                text-decoration: none;
+                padding-left: 40px;
+            }
+            .float_right li{
+                float: right;
+                list-style: none;
+                padding: 20px;                
+            }
+            .float_right ul{
+                float: right;
+                padding: 0px 0px 0px 10px; 
+            }
+            .float_right a{
+                color: white;
+                text-decoration: none;
+                padding: 0px 40px;
+            }
+            .clear{
+                clear: both; /* 지우다 : 양쪽 */
+                height: 0px; /* 높이 : 0 */
+                overflow: hidden; /* 넘쳤을 때 : 숨김 */
             }
             header>h1{
-                margin: 0px;
+                margin: 15px 0px 20px 0px;
             }
             header>h1>span:nth-child(1){
                 color: white;
@@ -22,7 +92,7 @@
             header>nav li{
                 float: left;
                 list-style: none; /*목록-모습(동그라미) : 없음 */
-                padding: 0px 10px;  /*  바깥 여백 - 왼쪽 :10px  */
+                padding: 20px 10px;  /*  바깥 여백 - 왼쪽 :10px  */
             }
             header ul{
                 margin: 12px 0px;
@@ -32,12 +102,7 @@
                 height: 0px; /* 높이 : 0 */
                 overflow: hidden; /* 넘쳤을 때 : 숨김 */
             }
-            .float_left{
-                float: left;
-            }
-            .float_right{
-                float: right;
-            }
+
             #main_visual{
                 background-image: url("images/troye.jpg");
                 background-size: auto 100%;
@@ -96,7 +161,7 @@
 
                 list-style: none;
                 border-right: solid 1px gray;
-                padding: 30px;
+                padding: 20px;
             } 
             section>#about_list>li:nth-child(4){
                 border: none;
@@ -121,9 +186,52 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            footer{
+                color: #ccc;
+                padding: 10px 30px;
+            }
+            footer>div>ul>li:nth-child(6){
+                border: none;
+            }
+            footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+             }
+            #footer_left{
+                 float: left;
+                margin: 3px 0px 0px;
+                font-size: 10px;
+            }
+             #footer_right{
+                float: right;
+                margin: 3px 0px 0px;
+            }
+        </style>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+                .one{
+                    font-family:'PT Serif', serif;
+                }
+            .one{
+                font-style: bold;
+            }    
         </style>
     </head>
     <body>
+        <header class="one">
+                <h1 class="float_left">INDEX</h1>
+                <nav class="float_right">
+                    <ul>
+                        <a href="layout4.html"> <li>EXODEUX</li> </a>
+                        <a href="layout3.html"> <li>LAYOUT3</li> </a>
+                        <a href="layout2.html"> <li>LAYOUT2</li> </a>
+                        <a href="layout1.html"> <li>LAYOUT1</li> </a>
+                        <a href="index.html"> <li>INDEX</li> </a>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
         <div id="wrap">
             <header>
                 <h1 class="float_left">
@@ -202,16 +310,30 @@
                     incididunt ut labore et dolore magna aliqua.
                 </p>
                 <ul id="work_list">
-                    <li><img src="images/troyesivan1.jpg" /></li>
-                    <li><img src="images/troyesivan4.jpg" /></li>
-                    <li><img src="images/troyesivan3.jpg" /></li>
-                    <li><img src="images/troyesivan6.jpg" /></li>
-                    <li><img src="images/troyesivan1.jpg" /></li>
-                    <li><img src="images/troyesivan4.jpg" /></li>
-                    <li><img src="images/troyesivan3.jpg" /></li>
-                    <li><img src="images/troyesivan6.jpg" /></li>                     
+                    <li><img src="images/troyesivan1.jpg" ></li></img>
+                    <li><img src="images/troyesivan4.jpg" ></li></img>
+                    <li><img src="images/troyesivan3.jpg" ></li></img>
+                    <li><img src="images/troyesivan6.jpg" ></li></img>
+                    <li><img src="images/troyesivan1.jpg" ></li></img>
+                    <li><img src="images/troyesivan4.jpg" ></li></img>
+                    <li><img src="images/troyesivan3.jpg" ></li></img>
+                    <li><img src="images/troyesivan6.jpg" ></li></img>
                     <div class="clear"></div>
+                    </ul>
             </section>
+
+            <footer>
+                    <div id="footer_left">
+                        <div>Kaywon University of Art and Design</div>
+                        <div>Digital Media Design Content programming</div>
+                        <div class="clear"></div>
+                    </div>
+                    <ul id="footer_right"> <!-- 오른편 상자 역할 -->
+                        <li><img src="images/footer_logo.png"width="70"></li></img>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+            </footer>
         </div>
     </body>
 </html>
